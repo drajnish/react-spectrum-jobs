@@ -6,6 +6,7 @@ import Dropdown from "./Dropdown/index";
 import Button from "./Button/index";
 import TextArea from "./TextArea/index";
 import Checkbox from "./Checkbox/index";
+import Header from "./Header";
 import { Route, Link } from "react-router-dom";
 
 export default class App extends Component {
@@ -77,6 +78,7 @@ export default class App extends Component {
 
     return (
       <div className="App">
+        <Header />
         <section className="registration">
           <div className="form-1">
             <form action="#" className="resume-upload-form">

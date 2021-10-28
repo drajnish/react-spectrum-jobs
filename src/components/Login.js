@@ -2,8 +2,8 @@ import React, { Component } from "react";
 
 import { Validators } from "../utilities/Validator";
 import InputField from "./InputField/index";
-import Dropdown from "./Dropdown/index";
 import Button from "./Button/index";
+import Header from "./Header";
 import { Route, Link } from "react-router-dom";
 
 export default class App extends Component {
@@ -28,6 +28,8 @@ export default class App extends Component {
 
     return (
       <div className="App">
+        <Header />
+
         <section class="login">
           <h1>Login</h1>
           <form action="#" className="login-form" id="loginForm">
@@ -63,7 +65,9 @@ export default class App extends Component {
               onChange={this.handleChange("password")}
             />
             <Button onClick={this.handleClick} value="Create Account" />
-            <Link to="/Signup">Don't have account? Signup</Link>
+            <Link to="/Signup" className="link-tag">
+              Don't have account? Signup
+            </Link>
           </form>
         </section>
       </div>

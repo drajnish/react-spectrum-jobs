@@ -4,6 +4,7 @@ import { Validators } from "../utilities/Validator";
 import InputField from "./InputField/index";
 import Dropdown from "./Dropdown/index";
 import Button from "./Button/index";
+import Header from "./Header";
 import { Route, Link } from "react-router-dom";
 
 export default class App extends Component {
@@ -33,6 +34,8 @@ export default class App extends Component {
 
     return (
       <div className="App">
+        <Header />
+
         <section class="login">
           <h1>Register</h1>
           <form action="#" class="login-form" id="loginForm">
@@ -82,7 +85,9 @@ export default class App extends Component {
               onChange={this.handleChange("password")}
             />
             <Button onClick={this.handleClick} value="Create Account" />
-            <Link to="/login">Already have an account? Login</Link>
+            <Link to="/login" className="link-tag">
+              Already have an account? Login
+            </Link>
           </form>
         </section>
       </div>

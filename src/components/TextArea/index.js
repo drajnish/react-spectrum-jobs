@@ -12,6 +12,8 @@ const InputField = ({
   validators,
   type,
   onChange,
+  cols,
+  rows,
 }) => {
   const [error, setError] = useState(false);
 
@@ -34,6 +36,8 @@ const InputField = ({
           value={value}
           className={inputClass}
           onChange={handleInputChange}
+          rows={rows}
+          cols={cols}
         >
           {placeholder}
         </textarea>
@@ -51,6 +55,8 @@ InputField.propTypes = {
   placeholder: PropTypes.string,
   validators: PropTypes.array,
   type: PropTypes.string,
+  rows: PropTypes.number,
+  cols: PropTypes.number,
   onChange: PropTypes.func.isRequired,
 };
 
@@ -61,6 +67,8 @@ InputField.defaultProps = {
   inputClass: [],
   labelClass: [],
   type: "text",
+  rows: "",
+  cols: "",
   validators: [],
 };
 

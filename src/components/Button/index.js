@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import "./buttonStyles.css";
 
-const Button = ({ value, onClick }) => (
+const Button = ({ value, onClick, buttonclass }) => (
   <button className="app-button" onClick={(event) => onClick(event)}>
     {value}
   </button>
@@ -11,6 +11,7 @@ const Button = ({ value, onClick }) => (
 
 Button.propTypes = {
   styleClass: PropTypes.string,
+  buttonclass: PropTypes.string,
   value: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
 };

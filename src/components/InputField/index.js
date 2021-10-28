@@ -45,8 +45,8 @@ const InputField = ({
 InputField.propTypes = {
   value: PropTypes.string,
   label: PropTypes.string,
-  inputClass: PropTypes.array,
-  labelClass: PropTypes.array,
+  inputClass: PropTypes.string,
+  labelClass: PropTypes.string,
   placeholder: PropTypes.string,
   validators: PropTypes.array,
   type: PropTypes.string,
@@ -57,8 +57,8 @@ InputField.defaultProps = {
   value: "",
   label: "",
   placeholder: "",
-  inputClass: [],
-  labelClass: [],
+  inputClass: "",
+  labelClass: "",
   type: "text",
   validators: [],
 };

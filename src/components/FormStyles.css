@@ -26,7 +26,7 @@ header {
 nav {
   font-size: 13px;
   color: #dcd2cc;
-  width: 25vw;
+  /* width: 40vw; */
 }
 
 .navbar {
@@ -98,6 +98,17 @@ nav {
 .job-seeker a:hover {
   color: rgba(45, 45, 45, 1);
   font-size: 2.5rem;
+}
+
+.link-tag {
+  text-decoration: none;
+  margin: 1rem;
+  font-weight: 600;
+  color: rgb(8, 95, 247);
+}
+
+.link-tag:hover {
+  color: rgba(8, 95, 247, 0.8);
 }
 
 /* ***************** registration ***************** */

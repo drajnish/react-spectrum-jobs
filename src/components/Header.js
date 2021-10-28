@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import "./FormStyles.css";
-import { Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default class App extends Component {
   render() {
@@ -20,23 +20,14 @@ export default class App extends Component {
                 <Link to="/Signup">Signup</Link>
               </li>
               <li>
-                <Link to="/UserDetail">User Detail</Link>
+                <Link to="/CandidateProfile">Candidate Profile</Link>
+              </li>
+              <li>
+                <Link to="/UserDetail">Candidate Detail</Link>
               </li>
             </ul>
           </nav>
         </header>
-        <section className="main-section">
-          <div className="employer">
-            <Link to="/">
-              <span className="main-heading">Employer</span>
-            </Link>
-          </div>
-          <div className="job-seeker">
-            <Link to="/Candidate">
-              <span className="main-heading">Candidate</span>
-            </Link>
-          </div>
-        </section>
       </div>
     );
   }
