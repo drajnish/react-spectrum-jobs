@@ -1,30 +1,14 @@
 import React, { Component } from "react";
 
+import Header from "./Header";
 import "./FormStyles.css";
-import { Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <header>
-          <nav>
-            <ul className="navbar">
-              <li>
-                <Link to="/react-spectrum-jobs">Home</Link>
-              </li>
-              <li>
-                <Link to="/Login">Login</Link>
-              </li>
-              <li>
-                <Link to="/Signup">Signup</Link>
-              </li>
-              <li>
-                <Link to="/UserDetail">User Detail</Link>
-              </li>
-            </ul>
-          </nav>
-        </header>
+        <Header />
         <section className="main-section">
           <div className="employer">
             <Link to="/">
