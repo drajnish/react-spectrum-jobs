@@ -25,6 +25,15 @@ export default class App extends Component {
               <li>
                 <Link to="/UserDetail">Candidate Detail</Link>
               </li>
+              <li>
+                <Link to="/EmployerSearch">Employer Search</Link>
+              </li>
+              <li>
+                <Link to="/EmployerConnect">Employer Connect</Link>
+              </li>
+              <li>
+                <Link to="/EmployerProfile">Employer Profile</Link>
+              </li>
             </ul>
           </nav>
         </header>

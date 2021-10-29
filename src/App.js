@@ -8,6 +8,9 @@ import Login from "./components/Login";
 import UserDetail from "./components/UserDetail";
 import Candidate from "./components/Candidate";
 import CandidateProfile from "./components/CandidateProfile";
+import EmployerProfile from "./components/EmployerProfile";
+import EmployerSearch from "./components/EmployerSearch";
+import EmployerConnect from "./components/EmployerConnect";
 import { Route, Link } from "react-router-dom";
 
 function App() {
@@ -19,6 +22,9 @@ function App() {
       <Route exact path="/UserDetail" component={UserDetail} />
       <Route exact path="/Candidate" component={Candidate} />
       <Route exact path="/CandidateProfile" component={CandidateProfile} />
+      <Route exact path="/EmployerSearch" component={EmployerSearch} />
+      <Route exact path="/EmployerConnect" component={EmployerConnect} />
+      <Route exact path="/EmployerProfile" component={EmployerProfile} />
     </div>
   );
 }

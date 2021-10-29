@@ -11,7 +11,7 @@ export default class App extends Component {
         <Header />
         <section className="main-section">
           <div className="employer">
-            <Link to="/">
+            <Link to="/EmployerSearch">
               <span className="main-heading">Employer</span>
             </Link>
           </div>

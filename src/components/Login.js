@@ -10,8 +10,6 @@ export default class App extends Component {
   state = {
     password: "",
     email: "",
-    message: "",
-    acceptance: false,
   };
 
   handleChange = (key) => (value) => {
@@ -24,7 +22,7 @@ export default class App extends Component {
   };
 
   render() {
-    const { text, password, message, acceptance, number, email } = this.state;
+    const { password, email } = this.state;
 
     return (
       <div className="App">

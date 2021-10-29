@@ -9,11 +9,12 @@ import { Route, Link } from "react-router-dom";
 
 export default class App extends Component {
   state = {
+    text: "",
     password: "",
     email: "",
     freshExp: "",
     message: "",
-    acceptance: false,
+    mnumber: "",
   };
 
   handleChange = (key) => (value) => {
@@ -30,7 +31,7 @@ export default class App extends Component {
   };
 
   render() {
-    const { text, freshExp, password, acceptance, number, email } = this.state;
+    const { text, freshExp, password, mnumber, email } = this.state;
 
     return (
       <div className="App">
@@ -40,19 +41,19 @@ export default class App extends Component {
           <h1>Register</h1>
           <form action="#" class="login-form" id="loginForm">
             <InputField
-              value={email}
-              placeholder="username@email.com"
+              value={mnumber}
+              placeholder="example@email.com"
               inputClass="form-input"
               labelClass="details-form-label"
-              type="email"
-              label="Email"
+              type="text"
+              label="Email Id"
               validators={[
                 {
                   check: Validators.required,
                   message: "this field is required",
                 },
               ]}
-              onChange={this.handleChange("email")}
+              onChange={this.handleChange("mnumber")}
             />
             <div class="form-info">
               <label htmlFor="fresher" class="details-form-label">
@@ -74,7 +75,7 @@ export default class App extends Component {
               placeholder="********"
               inputClass="form-input"
               labelClass="details-form-label"
-              type="password"
+              type="text"
               label="Password"
               validators={[
                 {

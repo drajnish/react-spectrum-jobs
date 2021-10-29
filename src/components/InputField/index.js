@@ -12,6 +12,7 @@ const InputField = ({
   validators,
   type,
   onChange,
+  disabled,
 }) => {
   const [error, setError] = useState(false);
 
@@ -34,6 +35,7 @@ const InputField = ({
           value={value}
           className={inputClass}
           placeholder={placeholder}
+          disabled={disabled}
           onChange={handleInputChange}
         />
         {error && <span className="error-msg">{error.message}</span>}
@@ -51,6 +53,7 @@ InputField.propTypes = {
   validators: PropTypes.array,
   type: PropTypes.string,
   onChange: PropTypes.func.isRequired,
+  disabled: PropTypes.bool,
 };
 
 InputField.defaultProps = {
@@ -61,6 +64,7 @@ InputField.defaultProps = {
   labelClass: "",
   type: "text",
   validators: [],
+  disabled: false,
 };
 
 export default InputField;

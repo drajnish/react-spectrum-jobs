@@ -14,6 +14,7 @@ const InputField = ({
   onChange,
   cols,
   rows,
+  textareadisabled,
 }) => {
   const [error, setError] = useState(false);
 
@@ -38,9 +39,9 @@ const InputField = ({
           onChange={handleInputChange}
           rows={rows}
           cols={cols}
-        >
-          {placeholder}
-        </textarea>
+          disabled={textareadisabled}
+          placeholder={placeholder}
+        ></textarea>
         {error && <span className="error-msg">{error.message}</span>}
       </div>
     </div>
@@ -58,6 +59,7 @@ InputField.propTypes = {
   rows: PropTypes.number,
   cols: PropTypes.number,
   onChange: PropTypes.func.isRequired,
+  textareadisabled: PropTypes.bool,
 };
 
 InputField.defaultProps = {
@@ -70,6 +72,7 @@ InputField.defaultProps = {
   rows: "",
   cols: "",
   validators: [],
+  textareadisabled: false,
 };
 
 export default InputField;
